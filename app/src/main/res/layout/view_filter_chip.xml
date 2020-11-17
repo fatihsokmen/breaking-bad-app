@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.github.fatihsokmen.breakingbad.filter.AppearanceFilterModel" />
+
+    </data>
+
+    <com.google.android.material.chip.Chip
+        style="@style/Widget.MaterialComponents.Chip.Choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="@{model.checked}"
+        android:tag="@{model.season}"
+        android:text="@{model.text}" />
+
+</layout>

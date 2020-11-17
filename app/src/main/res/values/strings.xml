@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Breaking Bad Explorer</string>
+
+    <string name="title_toolbar">Character Explorer</string>
+    <string name="title_characters">Characters</string>
+
+    <string name="label_filter">Filter</string>
+    <string name="label_search">Search</string>
+    <string name="label_filter_by_season_appearance">Filter by season appearance</string>
+    <string name="label_apply">Apply</string>
+    <string name="label_season_appearance">Season Appearance</string>
+    <string name="label_occupation">Occupation</string>
+</resources>

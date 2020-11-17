@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/fragment_characters">
+
+    <fragment
+        android:id="@+id/fragment_characters"
+        android:name="com.github.fatihsokmen.breakingbad.characters.CharacterListFragment"
+        android:label="@string/title_toolbar"
+        tools:layout="@layout/fragment_characters" />
+
+    <fragment
+        android:id="@+id/fragment_character_details"
+        android:name="com.github.fatihsokmen.breakingbad.details.CharacterDetailsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_character_details" />
+
+    <dialog
+        android:id="@+id/appearance_filter_fragment"
+        android:name="com.github.fatihsokmen.breakingbad.filter.AppearanceFilterFragment"
+        tools:layout="@layout/fragment_appearance_filter" />
+
+</navigation>
