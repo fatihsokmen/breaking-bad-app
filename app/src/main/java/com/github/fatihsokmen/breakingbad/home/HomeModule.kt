@@ -20,6 +20,7 @@ val homeModule: Module = module {
 
     viewModel {
         HomeViewModel(
+            dispatchers = get(),
             characterInteractor = get(),
             navigator = Navigator(),
             lastSeason = 5

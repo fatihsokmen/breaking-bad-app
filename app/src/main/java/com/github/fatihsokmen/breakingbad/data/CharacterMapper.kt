@@ -1,8 +1,6 @@
 package com.github.fatihsokmen.breakingbad.data
 
-import com.github.fatihsokmen.breakingbad.R
 
-const val STATUS_ALIVE = "Alive"
 const val SEASON = "Season"
 
 fun CharacterDomain.toModel() =
@@ -13,11 +11,7 @@ fun CharacterDomain.toModel() =
         photo = photo,
         appearance = appearance.map { "$SEASON $it" },
         occupation = occupation.map { "- $it" },
-        status = status,
-        statusTint = if (status.equals(STATUS_ALIVE, true))
-            R.color.teal_700
-        else
-            R.color.purple_200
+        status = status
     )
 
 fun CharacterResponse.toDomain() =

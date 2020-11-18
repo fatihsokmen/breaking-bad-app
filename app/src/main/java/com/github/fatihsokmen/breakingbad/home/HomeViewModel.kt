@@ -1,17 +1,18 @@
 package com.github.fatihsokmen.breakingbad.home
 
 import androidx.lifecycle.*
+import com.github.fatihsokmen.breakingbad.core.coroutine.CoroutineDispatcherProvider
 import com.github.fatihsokmen.breakingbad.data.CharacterDomain
 import com.github.fatihsokmen.breakingbad.data.CharacterInteractor
 import com.github.fatihsokmen.breakingbad.data.CharacterModel
 import com.github.fatihsokmen.breakingbad.data.toModel
 import com.github.fatihsokmen.breakingbad.filter.AppearanceFilterModel
 import com.github.fatihsokmen.breakingbad.navigation.Navigator
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class HomeViewModel(
+    private val dispatchers: CoroutineDispatcherProvider,
     private val characterInteractor: CharacterInteractor,
     val navigator: Navigator,
     val lastSeason: Int
@@ -49,7 +50,7 @@ class HomeViewModel(
     fun loadCharacters() {
         viewModelScope.launch {
             isLoading.value = true
-            withContext(Dispatchers.IO) {
+            withContext(dispatchers.io) {
                 characterInteractor.getCharacters()
             }.onSuccess {
                 characterDomains.value = it

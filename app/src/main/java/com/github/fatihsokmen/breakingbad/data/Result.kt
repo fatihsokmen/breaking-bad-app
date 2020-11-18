@@ -13,4 +13,9 @@ sealed class Result<T> {
     fun onError(errorHandler: (t: Throwable) -> Unit): Result<T> = this.also {
         if (this is Error) errorHandler(throwable)
     }
+
+    fun getOrNull(): T? = when (this) {
+        is Success -> data
+        else -> null
+    }
 }

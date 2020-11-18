@@ -1,5 +1,6 @@
 package com.github.fatihsokmen.breakingbad.core.module
 
+import com.github.fatihsokmen.breakingbad.core.coroutine.CoroutineDispatcherProvider
 import retrofit2.converter.moshi.MoshiConverterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -13,6 +14,9 @@ val appModule: Module = module {
     }
     single {
         provideOkHttpClient()
+    }
+    single<CoroutineDispatcherProvider> {
+        CoroutineDispatcherProvider.Default()
     }
 }
 
