@@ -1,6 +1,6 @@
 ## Breaking Bad Explorer
 
-An Android app based on MVVM design
+An Android app based on MVVM design pattern
 
 ![screen 1](https://raw.githubusercontent.com/fatihsokmen/Breaking-Bad-App/master/arts/Screenshot_1605693818.png)
 ![screen 2](https://raw.githubusercontent.com/fatihsokmen/Breaking-Bad-App/master/arts/Screenshot_1605693815.png)
